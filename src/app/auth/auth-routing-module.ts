@@ -13,6 +13,7 @@ const routes: Routes = [
     {path: 'login',component: LoginPageComponent},
     {path: 'new-account', component: RegisterPageComponent},
     {path: '**',redirectTo: 'login'},
+    {path: '', component:NewPageComponent}
   ]
 }
 
