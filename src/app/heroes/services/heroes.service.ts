@@ -19,12 +19,14 @@ export class HeroesService {
   }
 
   getHeroById( id: string ): Observable<Hero|undefined>{
-    return this.httClient.get<Hero>(`${this.baseUr1 } /heroes/${ id }`)
+    return this.httClient.get<Hero>(`${ this.baseUr1 } /heroes/${ id }`)
       .pipe(
-        catchError(error=> of(undefined))
+        catchError(error => of(undefined))
       );
-        
-      
+           
+  }
+  getSuggestions( query: string):Observable<Hero[]>{
+      return this.httClient.get<Hero[]>(`${this.baseUr1}/heroes?q=${query }&_limit=6`)
   }
   
 }

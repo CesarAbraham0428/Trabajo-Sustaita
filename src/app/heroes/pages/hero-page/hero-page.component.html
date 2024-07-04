@@ -3,7 +3,6 @@
         <mat-grid-tile>
             <mat-spinner></mat-spinner>
         </mat-grid-tile>
-
     </mat-grid-list>
 </ng-template>
 
@@ -11,9 +10,7 @@
     <!-- {{hero | json}} -->
 
     <mat-card>
-
         <mat-card-header>
-
             <mat-card-title> {{ hero.alter_ego }} </mat-card-title>
             <mat-card-subtitle> {{ hero.superhero }} </mat-card-subtitle>
         </mat-card-header>
@@ -22,7 +19,6 @@
         mat-card-image />
         
     </mat-card>
-
     <mat-card class="col-12 sm:col-6">
         <mat-card-header>
             <mat-card-title> Información </mat-card-title>
@@ -30,13 +26,11 @@
         </mat-card-header>
 
     <mat-card-content>
-
         <mat-list>
-
             <mat-list-item> {{ hero.first_appearance }} </mat-list-item>
-            <mat-list-item> {{hero.characters}} </mat-list-item>
-            <mat-list-item> {{hero.publisher}} </mat-list-item>
-            <mat-list-item> {{hero.alter_ego}} </mat-list-item>
+            <mat-list-item> {{hero.characters }} </mat-list-item>
+            <mat-list-item> {{hero.publisher }} </mat-list-item>
+            <mat-list-item> {{hero.alter_ego }} </mat-list-item>
 
         </mat-list>
         <button

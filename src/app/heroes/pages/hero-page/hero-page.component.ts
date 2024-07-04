@@ -16,22 +16,22 @@ export class HeroPageComponent implements OnInit{
   public hero? : Hero;
 
     constructor(
-      private HeroesService: HeroesService,
-      private ActivatedRoute: ActivatedRoute,
+      private heroesService: HeroesService,
+      private activatedRoute: ActivatedRoute,
       private router: Router,
     ){}
   
   ngOnInit(): void {
-    this.ActivatedRoute.params
+    this.activatedRoute.params
     .pipe(
-      switchMap(({ id }) => this.HeroesService.getHeroById(id) ),
+      switchMap(({ id }) => this.heroesService.getHeroById(id) ),
     )
     .subscribe( hero => {
         if ( !hero ) return this.router.navigate(['/heroes/lists']);
 
         this.hero = hero;
         console.log(hero);
-        return
+        return;
     } )
 
   }
